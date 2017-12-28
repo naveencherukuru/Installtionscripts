@@ -18,6 +18,8 @@ host    all             all             ::1/128                 trust
 DELIM
 sudo service postgresql restart
 sudo update-rc.d postgresql enable
+sudo -i psql -U postgres -h localhost -p 5432 -c "CREATE EXTENSION citus;"
+
 
 
 
